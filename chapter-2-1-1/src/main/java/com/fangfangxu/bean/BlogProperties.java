@@ -11,6 +11,16 @@ public class BlogProperties {
     private String title;
     @Value("${com.fangfangxu.blog.desc}")
     private String desc;
+    @Value("${com.didispace.blog.test1}")
+    private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getUsername() {
         return username;

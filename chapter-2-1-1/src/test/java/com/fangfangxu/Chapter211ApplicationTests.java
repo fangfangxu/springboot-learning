@@ -19,7 +19,8 @@ public class Chapter211ApplicationTests {
     public void getHello()  throws Exception{
         Assert.assertEquals(blogProperties.getUsername(), "徐方方");
         Assert.assertEquals(blogProperties.getTitle(), "SpringBoot练习");
-        Assert.assertEquals(blogProperties.getTitle(), "SpringBoot练习");
+//        Assert.assertEquals(blogProperties.getDesc(), "SpringBoot练习");
+
     }
 
 }
