@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fangfangxu</groupId>
-    <artifactId>chapter-2-2-1</artifactId>
+    <artifactId>chap-2-2-1</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>chapter-2-2-1</name>
+    <name>chap-2-2-1</name>
     <description>springboot</description>
 
     <parent>
