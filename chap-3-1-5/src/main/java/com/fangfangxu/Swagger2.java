@@ -16,7 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @Configuration
 public class Swagger2 {
-
+//1、配置Api的基本信息，该基本信息会展示在文档页面中
+//2、可以指定扫描的包路径，会扫描该包下所有Controller定义的API，并产生文档内容（除了被@ApiIgnore指定的请求）。
 
     @Bean
     public Docket createRestApi() {
