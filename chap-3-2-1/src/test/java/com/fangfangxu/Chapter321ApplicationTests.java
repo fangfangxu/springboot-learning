@@ -1,9 +1,12 @@
 package com.fangfangxu;
 
-import com.fangfangxu.web.HelloController;
+import com.fangfangxu.controller.HelloController;
+import com.fangfangxu.service.UserService;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -18,22 +21,38 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-
-@WebAppConfiguration
 public class Chapter321ApplicationTests {
+  @Autowired
+  private UserService userSerivce;
 
-    private MockMvc mvc;
 
     @Before
     public void setUp() throws Exception {
-        mvc = MockMvcBuilders.standaloneSetup(new HelloController()).build();
+        userSerivce.deleteAllUsers();
     }
 
     @Test
     public void getHello() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/hello").accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().string(equalTo("Hello World321")));
+        // 插入5个用户
+        userSerivce.create("a", 1);
+        userSerivce.create("b", 2);
+        userSerivce.create("c", 3);
+        userSerivce.create("d", 4);
+        userSerivce.create("e", 5);
+
+        // 查数据库，应该有5个用户
+        Assert.assertEquals(5, userSerivce.getAllUsers().intValue());
+
+        // 删除两个用户
+        userSerivce.deleteByName("a");
+        userSerivce.deleteByName("e");
+
+        // 查数据库，应该有5个用户
+        Assert.assertEquals(3, userSerivce.getAllUsers().intValue());
+
+
+
+
 
     }
 
