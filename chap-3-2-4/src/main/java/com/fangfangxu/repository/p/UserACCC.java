@@ -1,5 +1,6 @@
-package com.fangfangxu.entity;
+package com.fangfangxu.repository.p;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -9,6 +10,7 @@ import javax.persistence.Id;
 
 @Entity
 @Data
+@AllArgsConstructor
 public class UserACCC {
     @Id
     @GeneratedValue

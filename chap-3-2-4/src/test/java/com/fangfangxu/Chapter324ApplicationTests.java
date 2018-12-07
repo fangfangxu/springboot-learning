@@ -1,21 +1,20 @@
 package com.fangfangxu;
 
 
-import com.fangfangxu.entity.Message;
-import com.fangfangxu.entity.UserACCC;
+import com.fangfangxu.repository.u.Message;
+import com.fangfangxu.repository.p.UserACCC;
 import com.fangfangxu.repository.p.UserRepository;
 import com.fangfangxu.repository.u.MessageRepository;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = Chapter324Application.class)
 public class Chapter324ApplicationTests {
     @Autowired
     private UserRepository userRepository;
