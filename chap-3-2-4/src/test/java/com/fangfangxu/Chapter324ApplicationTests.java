@@ -24,19 +24,13 @@ public class Chapter324ApplicationTests {
     @Test
     public void test() throws Exception {
 
-        userRepository.save(new UserACCC("aaa", 10));
-        userRepository.save(new UserACCC("bbb", 20));
-        userRepository.save(new UserACCC("ccc", 30));
-        userRepository.save(new UserACCC("ddd", 40));
-        userRepository.save(new UserACCC("eee", 50));
+        userRepository.save(new UserACCC("ceshi1", 10));
+        userRepository.save(new UserACCC("ceshi2", 20));
 
-        Assert.assertEquals(5, userRepository.findAll().size());
 
-        messageRepository.save(new Message("o1", "aaaaaaaaaa"));
-        messageRepository.save(new Message("o2", "bbbbbbbbbb"));
-        messageRepository.save(new Message("o3", "cccccccccc"));
+        messageRepository.save(new Message("o1", "ceshi1"));
+        messageRepository.save(new Message("o2", "ceshi2"));
 
-        Assert.assertEquals(3, messageRepository.findAll().size());
 
     }
 
