@@ -24,7 +24,7 @@ import java.util.Map;
         basePackages= { "com.fangfangxu.repository.u"}) //设置dao（repo）所在位置
 public class SecondaryConfig {
     @Autowired
-    @Qualifier("secondaryDataSource")
+    @Qualifier("dataSource2")
     private DataSource secondaryDataSource;
     @Autowired
     private JpaProperties jpaProperties;

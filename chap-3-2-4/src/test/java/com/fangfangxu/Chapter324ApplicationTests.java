@@ -24,12 +24,12 @@ public class Chapter324ApplicationTests {
     @Test
     public void test() throws Exception {
 
-        userRepository.save(new UserACCC("ceshi1", 10));
-        userRepository.save(new UserACCC("ceshi2", 20));
+        userRepository.save(new UserACCC("ceshi1", 1000));
+        userRepository.save(new UserACCC("ceshi2", 2000));
 
 
-        messageRepository.save(new Message("o1", "ceshi1"));
-        messageRepository.save(new Message("o2", "ceshi2"));
+        messageRepository.save(new Message("o1", "ceshi1000"));
+        messageRepository.save(new Message("o2", "ceshi2000"));
 
 
     }
