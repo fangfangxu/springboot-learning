@@ -8,24 +8,24 @@ import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-@Configuration
+//@Configuration
 public class RedisConfig {
-    @Bean
-    JedisConnectionFactory jedisConnectionFactory() {
-        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
-        jedisConnectionFactory.setPassword("123456");
-        return jedisConnectionFactory;
-    }
-
-
-    @Bean
-    public RedisTemplate<String, User> redisTemplate() {
-        RedisTemplate<String, User> template = new RedisTemplate<String, User>();
-        template.setConnectionFactory(jedisConnectionFactory());
-        template.setKeySerializer(new StringRedisSerializer());
-        template.setValueSerializer(new RedisObjectSerializer());
-        return template;
-    }
+//    @Bean
+//    JedisConnectionFactory jedisConnectionFactory() {
+//        JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory();
+//        jedisConnectionFactory.setPassword("123456");
+//        return jedisConnectionFactory;
+//    }
+//
+//
+//    @Bean
+//    public RedisTemplate<String, User> redisTemplate() {
+//        RedisTemplate<String, User> template = new RedisTemplate<String, User>();
+//        template.setConnectionFactory(jedisConnectionFactory());
+//        template.setKeySerializer(new StringRedisSerializer());
+//        template.setValueSerializer(new RedisObjectSerializer());
+//        return template;
+//    }
 
 
 }
