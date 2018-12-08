@@ -1,11 +1,13 @@
 package com.fangfangxu;
 
 
+import com.fangfangxu.pojo.User;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -14,7 +16,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class Chapter325ApplicationTests {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
-
+    @Autowired
+    private RedisTemplate<String, User> redisTemplate;
     /**
      * 通过编写测试用例，举例说明如何访问Redis
      * @throws Exception
@@ -22,8 +25,12 @@ public class Chapter325ApplicationTests {
     @Test
     public void getHello() throws Exception {
         // 保存字符串
-        stringRedisTemplate.opsForValue().set("aaa", "111");
-        Assert.assertEquals("111", stringRedisTemplate.opsForValue().get("aaa"));
+//        stringRedisTemplate.opsForValue().set("aaa", "3332");
+//        Assert.assertEquals("3332", stringRedisTemplate.opsForValue().get("aaa"));
+        User user=new User("xufangfang",20);
+        redisTemplate.opsForValue().set(user.getUsername(),user);
+
+
 
     }
 
