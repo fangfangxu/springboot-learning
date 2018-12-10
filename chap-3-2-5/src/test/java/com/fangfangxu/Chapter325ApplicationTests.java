@@ -29,6 +29,7 @@ public class Chapter325ApplicationTests {
         // 保存字符串d
         stringRedisTemplate.opsForValue().set("aaa", "3332");
 //        Assert.assertEquals("3332", stringRedisTemplate.opsForValue().get("aaa"));
+
         User user=new User("xufangfang",20);
         redisTemplate.opsForValue().set(user.getUsername(),user);
         redisTemplate.opsForValue().get(user.getUsername());
