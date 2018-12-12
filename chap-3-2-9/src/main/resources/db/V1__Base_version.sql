@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS user ;
 CREATE TABLE `user` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '??',
-  `name` varchar(20) NOT NULL COMMENT '??',
-  `age` int(5) DEFAULT NULL COMMENT '??',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'id',
+  `name` varchar(20) NOT NULL COMMENT '用户名',
+  `age` int(5) DEFAULT NULL COMMENT '年龄',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
