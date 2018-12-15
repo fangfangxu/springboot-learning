@@ -2,13 +2,11 @@ package com.fangfangxu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@EnableScheduling
-public class Chapter441Application {
+public class Chapter412Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Chapter441Application.class, args);
+        SpringApplication.run(Chapter412Application.class, args);
     }
 }
