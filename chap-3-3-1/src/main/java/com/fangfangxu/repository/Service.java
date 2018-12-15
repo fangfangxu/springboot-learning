@@ -19,7 +19,7 @@ public class Service {
         userRepository.save(new User("EEE", 50));
         userRepository.save(new User("FFF", 60));
         userRepository.save(new User("GGG", 70));
-        userRepository.save(new User("HHHHHHHH", 80));
+        userRepository.save(new User("HHH", 80));
         userRepository.save(new User("III", 90));
         userRepository.save(new User("JJJ", 100));
     }
