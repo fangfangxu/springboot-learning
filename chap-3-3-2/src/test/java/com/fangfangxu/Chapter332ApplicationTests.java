@@ -1,6 +1,5 @@
 package com.fangfangxu;
 
-import com.fangfangxu.web.HelloController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
