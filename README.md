@@ -13,4 +13,43 @@ springboot入门
 （2）springboot2.0：@Test @Trans 默认还是@Rollback=true ，但是写@Rollback=false的时候是不回滚。
 
 在@test测试类中，使用@Transactional默认是回滚的（无论成功还是失败），除非显示的去写@Rollback(value = false)。
+
+4、异步是目的，多线程是实现异步的一个方式：
+
+为什么引入Executor线程池框架？
+
+（1）new Thread()的缺点：每次new Thread()耗费性能，每次new Thread()耗费性能 ，调用new Thread()创建的线程缺乏管理，被称为野线程，而且可以无限制创建，之间相互竞争，会导致过多占用系统资源导致系统瘫痪。 
+
+（2）采用线程池的优点：重用存在的线程，减少对象创建、消亡的开销，性能佳。可有效控制最大并发线程数，提高系统资源的使用率，同时避免过多资源竞争，避免堵塞 。
+
+（3）Executor框架是Java 5中引入：其内部使用了线程池机制，它在java.util.cocurrent 包下，通过该框架来控制线程的启动、执行和关闭，可以简化并发编程的操作。
+Executor框架包括：线程池，Executor，Executors，ExecutorService，CompletionService，Future，Callable等。
+
+（4）java中的线程池（ThreadPoolExecutor）---ExecutorService的一个底层实现
+ 
+    ThreadPoolExecutor--->AbstractExecutorService--->ExecutorService--->Executor
+    
+    ThreadPoolExecutor是线程池的真正实现，他通过构造方法的一系列参数，来构成不同配置的线程池
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
