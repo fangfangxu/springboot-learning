@@ -31,16 +31,20 @@ Executor框架包括：线程池，Executor，Executors，ExecutorService，Comp
     
     ThreadPoolExecutor是线程池的真正实现，他通过构造方法的一系列参数，来构成不同配置的线程池
 
+5、
+  （1）Spring Boot 2.*默认采用了slf4j+logback的形式 ，slf4j是个通用的日志门面，logback就是个具体的日志框架了，我们记录日志的时候采用slf4j的方法去记录日志，底层的实现就是根据引用的不同日志jar去判定了。所以Spring Boot也能自动适配JCL、JUL、Log4J等日志框架，它的内部逻辑就是通过特定的JAR包去适配各个不同的日志框架。
+  
+  （2）默认情况下，Spring Boot会用Logback来记录日志，并用INFO级别输出到控制台。（spring-boot-starter其中包含了 spring-boot-starter-logging，该依赖内容就是 Spring Boot 默认的日志框架 logback）
+ 
+  （3）SpringBoot能自动适配所有的日志，其底层使用slf4j+logback的方式记录日志，引入其他框架的时候，只需要 把这个框架依赖的日志框架排除掉即可，因为Spring Boot会通过自己的jar去替代；
 
-
-
-
-
-
-
-
-
-
+  （4）切换Log4j2框架：Spring Boot虽然默认使用Logback日志框架，但其内部也集成了Log4j2框架。要知道的是，在Java中，Log4j2框架的性能是最强的，所以我们一般在程序中使用Log4j2框架。下面介绍一下Log4j2的使用及其内部属性的含义。 
+  首先，要在Spring Boot使用Log4j2的话，那么第一件事就是去除Logback的jar包，并引入Log4j2的jar。
+  
+  （5）控制台输出
+  日志级别从低到高分为
+  TRACE < DEBUG < INFO < WARN < ERROR < FATAL。
+  Spring Boot中默认配置ERROR、WARN和INFO级别的日志输出到控制台。 
 
 
 
