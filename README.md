@@ -46,12 +46,22 @@ Executor框架包括：线程池，Executor，Executors，ExecutorService，Comp
   TRACE < DEBUG < INFO < WARN < ERROR < FATAL。
   Spring Boot中默认配置ERROR、WARN和INFO级别的日志输出到控制台。 
 
+6、AOP执行顺序：
 
+@Before---->@Around--->业务--->@Around--->@After--->@AfterReturning
 
+@Before---->@Around--->业务异常->@Around--->@After--->@AfterThrowing
 
+业务代码正常try...catch:@Around--->@Before---->业务--->@Around--->@After--->@AfterReturning
 
+7、AOP切面的优先级@Order(5)
 
+在切入点前的操作，按order的值由小到大执行
 
+在切入点后的操作，按order的值由大到小执行
+
+---Around1---Before1---Around2---Before2---业务代码---Around2---After2---AfterReturning2---
+---Around1---After1---AfterReturning1---
 
 
 
