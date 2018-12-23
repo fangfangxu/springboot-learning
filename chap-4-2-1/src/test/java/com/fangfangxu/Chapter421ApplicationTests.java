@@ -15,9 +15,12 @@ public class Chapter421ApplicationTests {
 
     @Test
     public void getHello() throws Exception {
-        logger.info("输出info");
-        logger.debug("输出debug");
-        logger.error("输出error");
+        logger.trace("Trace Message!");
+        logger.debug("Debug Message!");
+        logger.info("Info Message!");
+        logger.warn("Warn Message!");
+        logger.error("Error Message!");
+        logger.fatal("Fatal Message!");
     }
 
 }
