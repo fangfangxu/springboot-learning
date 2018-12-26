@@ -19,7 +19,7 @@ import java.util.Map;
 @Component
 @Aspect
 public class WebLogAspect {
-    private Logger logger = Logger.getLogger("mongodb");
+    private Logger logger = Logger.getLogger("aaa");
     @Pointcut("execution(public * com.fangfangxu.web..*.*(..))")
     public void webLog(){}
 
@@ -38,18 +38,18 @@ public class WebLogAspect {
         // 基本信息
         BasicDBObject r = new BasicDBObject();
         r.append("requestURL", request.getRequestURL().toString());
-        r.append("requestURI", request.getRequestURI());
-        r.append("queryString", request.getQueryString());
-        r.append("remoteAddr", request.getRemoteAddr());
-        r.append("remoteHost", request.getRemoteHost());
-        r.append("remotePort", request.getRemotePort());
-        r.append("localAddr", request.getLocalAddr());
-        r.append("localName", request.getLocalName());
-        r.append("method", request.getMethod());
-        r.append("headers", getHeadersInfo(request));
-        r.append("parameters", request.getParameterMap());
-        r.append("classMethod", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
-        r.append("args", Arrays.toString(joinPoint.getArgs()));
+//        r.append("requestURI", request.getRequestURI());
+//        r.append("queryString", request.getQueryString());
+//        r.append("remoteAddr", request.getRemoteAddr());
+//        r.append("remoteHost", request.getRemoteHost());
+//        r.append("remotePort", request.getRemotePort());
+//        r.append("localAddr", request.getLocalAddr());
+//        r.append("localName", request.getLocalName());
+//        r.append("method", request.getMethod());
+//        r.append("headers", getHeadersInfo(request));
+//        r.append("parameters", request.getParameterMap());
+//        r.append("classMethod", joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName());
+//        r.append("args", Arrays.toString(joinPoint.getArgs()));
         return r;
     }
 
