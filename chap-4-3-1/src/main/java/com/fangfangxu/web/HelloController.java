@@ -7,11 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-@RestController
+@Controller
 public class HelloController {
 
-    @RequestMapping("/hello")
+    @RequestMapping("/")
     public String index() {
-        return "Hello World431";
+        return "index";
         }
+    @RequestMapping("/hello")
+    public String hello() {
+        return "hello";
+    }
+
+
         }
