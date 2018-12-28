@@ -33,12 +33,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   //在内存中创建了一个用户，该用户的名称为user，密码为password，用户角色为USER。
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-            auth.inMemoryAuthentication()
-                .withUser("user").password("password").roles("USER");
+//            auth.inMemoryAuthentication()
+//                .withUser("user").password("password").roles("USER");
         //Spring security 5.0中新增了多种加密方式，也改变了密码的格式。
-//        auth
-//                .inMemoryAuthentication()
-//                .passwordEncoder(new BCryptPasswordEncoder())
-//                .withUser("wangyuxuan").password(new BCryptPasswordEncoder().encode("123456")).roles("USER");
+        auth
+                .inMemoryAuthentication()
+                .passwordEncoder(new BCryptPasswordEncoder())
+                .withUser("xufangfang").password(new BCryptPasswordEncoder().encode("123456")).roles("USER");
     }
 }
