@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @Controller
+//@RestController
 public class HelloController {
 
     @RequestMapping("/")
