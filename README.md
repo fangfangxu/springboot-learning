@@ -63,7 +63,19 @@ Executor框架包括：线程池，Executor，Executors，ExecutorService，Comp
 ---Around1---Before1---Around2---Before2---业务代码---Around2---After2---AfterReturning2---
 ---Around1---After1---AfterReturning1---
 
+8、认证过程
+1、用户使用用户名和密码进行登录。
 
+2、Spring Security将获取到的用户名和密码封装成一个Authentication接口的实现类，比如常用的UsernamePasswordAuthenticationToken。
 
+3、将上述产生的Authentication对象传递给AuthenticationManager的实现类ProviderManager进行认证。
 
+4、ProviderManager依次调用各个AuthenticationProvider进行认证，认证成功后返回一个封装了用户权限等信息的Authentication对象。
+
+5、将AuthenticationManager返回的Authentication对象赋予给当前的SecurityContext
+
+問題：
+1、springSecurity的remember-me
+
+2、cookie、session、token的區別
    
