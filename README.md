@@ -105,6 +105,7 @@ Executor框架包括：线程池，Executor，Executors，ExecutorService，Comp
  生产者将消息发送给交换器时，需要一个RoutingKey，当BindingKey和RoutingKey相匹配时，消息会被路由到对应的队列中
 
 一.生产者发送消息的过程
+
 1.生产者连接到RabbitMQ，建立一个连接（connection），开启一个信道（channel)
 
 2.生产者声明一个交换器
