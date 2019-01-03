@@ -79,7 +79,7 @@ Executor框架包括：线程池，Executor，Executors，ExecutorService，Comp
 
 2、cookie、session、token的區別
 
-9、RabbitMQ（路由模式）
+9、RabbitMQ（exchange是direct类型为例）
 
 （1）生产者：投递消息的一方、消费者：接受消息的一方
 
