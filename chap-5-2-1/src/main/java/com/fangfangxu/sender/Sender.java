@@ -17,7 +17,7 @@ public class Sender {
     public void send(){
         String context="xufangfang"+new Date()+"happyEveryDay";
         System.out.print(context);
-        this.rabbitTemplate.convertAndSend("xufangfang",context);
+        this.rabbitTemplate.convertAndSend("d",context);
     }
 
 
